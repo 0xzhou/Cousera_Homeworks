@@ -8,7 +8,7 @@ private:
 	char name[20];
 	int age;
 	char number[20];
-	int grade1, grade2, grade3, grade4, a_grade;
+	int grade1, grade2, grade3, grade4, a_grade;// four years grades and average grade
 public:
 	void Init(char name_[20], int age_,char number_[20],int grade_1,int grade_2,int grade_3,int grade_4) {
 		strcpy_s(name, name_);
