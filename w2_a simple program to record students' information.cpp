@@ -10,7 +10,7 @@ private:
 	char number[20];
 	int grade1, grade2, grade3, grade4, a_grade;// four years grades and average grade
 public:
-	void Init(char name_[20], int age_,char number_[20],int grade_1,int grade_2,int grade_3,int grade_4) {
+	void Init(char name_[20], int age_,char number_[20],int grade_1,int grade_2,int grade_3,int grade_4) {//initialize function
 		strcpy_s(name, name_);
 		age = age_;
 		strcpy_s(number, number_);
