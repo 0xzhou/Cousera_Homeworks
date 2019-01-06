@@ -7,7 +7,7 @@ public:
 	A(int n = 0) {
 		val = n;
 	}
-	int& GetObj() {
+	int& GetObj() {//why here reference ??
 		return val;
 	}
 };
