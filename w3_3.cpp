@@ -3,13 +3,13 @@ using namespace std;
 class Base {
 public:
 	int k;
-	Base(int n) :k(n) {}//ÀàĞÍ×ª»»¹¹Ôìº¯Êı
+	Base(int n) :k(n) {}//ç±»å‹è½¬æ¢æ„é€ å‡½æ•°
 };
 class Big {
 public:
 	int v; Base b;
 	//
-	Big(int n) :v(n), b(n) {}//ÀàĞÍ×ª»»¹¹Ôìº¯Êı
+	Big(int n) :v(n), b(n) {}//ç±»å‹è½¬æ¢æ„é€ å‡½æ•°
 	Big(const Big & a) :v(a.v), b(a.b.k) {}
 	//
 };
@@ -19,3 +19,5 @@ int main() {
 	cout << a2.v << "," << a2.b.k << endl;
 	return 0;
 }
+
+//output a1.v=5; a1.b.k=5; a2.v=5; a2.b.k=5
