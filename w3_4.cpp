@@ -2,9 +2,9 @@
 #include<iomanip>
 
 using namespace std;
-enum warriors {dragon,ninja,iceman,lion,wolf,NUMwarriors};
+enum warriors {dragon,ninja,iceman,lion,wolf,NUMwarriors};// define warriors' name
 char str_warriors[NUMwarriors][7] = { "dragon","ninja","iceman","lion","wolf" };// ??
-enum colors {red,blue,NUMcolors};
+enum colors {red,blue,NUMcolors};// define the warrios' color and const number of color
 char str_colors[NUMcolors][5] = { "red","blue" };// ??
 
 class Warrior
@@ -90,7 +90,7 @@ public:
 
 int main()
 {
-	int ntc; // the number of test cases
+	int ntc; // the number of test cases='ntc'
 	cin >> ntc;
 	for (int tc = 1; tc <= ntc; tc++)
 	{
