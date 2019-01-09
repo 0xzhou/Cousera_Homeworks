@@ -104,7 +104,7 @@ int main()
 			cin >> sw;
 			Red.Setwarrior(i, sw); Blue.Setwarrior(i, sw);//???
 		}
-		Red.SetWCseq(red); Blue.SetWCseq(red);//???
+		Red.SetWCseq(red); Blue.SetWCseq(blue);//???
 		//		Red.PrintInfo(); Blue.PrintInfo();
 		cout << "Case:" << tc << endl;
 		int res1, res2;
@@ -113,10 +113,8 @@ int main()
 		while (res1 > 0 && res2 > 0)
 		{
 			res1 = Red.CreatWarrior(red, res1);
-			res2 = Red.CreatWarrior(blue, res2);
+			res2 = Blue.CreatWarrior(blue, res2);
 		}
-		while (res1 == 0 || res2 == 0)
-			break;
 		while(res1>0)
 			res1 = Red.CreatWarrior(red, res1);
 		while(res2>0)
