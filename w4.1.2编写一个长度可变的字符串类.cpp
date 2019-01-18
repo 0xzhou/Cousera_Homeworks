@@ -11,14 +11,17 @@ private:
 public:
 	String() :str(NULL) {}//构造函数，初始化str为NULL
 	const char * c_str() { return str; }
-	char * operator =(const char * s);
+	char * operator =(const char * s);// define the overloading operator "="
 	~String();
 };
-char * String::operator=(const char * s) {
+
+// overload '=', so make obj="hello" possible
+// String obj;
+char * String::operator=(const char * s) { // s poins to the address of a string.
 	if (str) delete[] str;
-	if (s) {
-		str = new char[strlen(s) + 1];
-		strcpy(str, s);
+	if (s) { // if s not NULL, then implements copy
+		str = new char[strlen(s) + 1]; // '+1' is to add the '\0'
+		strcpy(str, s); // copy "hello" to obj
 	}
 	else
 		str = NULL;
@@ -29,7 +32,7 @@ String::~String() {
 }
 int main() {
 	String s;
-	s = "Good Luck,";//s.operator=(" ")
+	s = "Good Luck,";//s.operator=(" ") ???
 	cout << s.c_str() << endl;
 	s = "Shenzhou 8!";
 	cout << s.c_str() << endl;
