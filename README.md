@@ -12,3 +12,10 @@
 const pointer 含义：不能够通过修改指针，去修改该指针指向的内容
 
 char * String::operator=(const char * s) { // s poins to the address of a string. ？？？？？？
+
+
+
+19.01.2019:
+
+深拷贝 ？？？？
+

@@ -13,10 +13,20 @@ public:
 	const char * c_str() { return str; }
 	char * operator =(const char * s);// define the overloading operator "="
 	~String();
+	// Éî¿½±´
+	String & operator=(const String & s) {
+		if (str == s.str)return *this;
+		if (str) delete[] str;
+		str = new char[strlen(s.str) + 1];
+		strcpy(str, s.str);
+		return *this;
+	}
+	//
 };
 
 // overload '=', so make obj="hello" possible
 // String obj;
+
 char * String::operator=(const char * s) { // s poins to the address of a string.
 	if (str) delete[] str;
 	if (s) { // if s not NULL, then implements copy
